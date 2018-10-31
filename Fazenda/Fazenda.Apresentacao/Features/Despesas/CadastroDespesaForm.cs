@@ -53,7 +53,7 @@ namespace Fazenda.Apresentacao.Features.Despesas
                 _despesa.Data = datePicker.Value;
                 _despesa.Fornecedor = (Fornecedor)cmbFornecedor.SelectedItem;
                 _despesa.Item = (Item)cmbItens.SelectedItem;
-                _despesa.Quantidade = (int)numQuantidade.Value;
+                _despesa.Quantidade = Convert.ToDouble(numQuantidade.Value);
                 _despesa.ValorUnitario = Convert.ToDouble(numValorUnitario.Text);
                 return _despesa;
             }
@@ -66,7 +66,7 @@ namespace Fazenda.Apresentacao.Features.Despesas
                 datePicker.Value = _despesa.Data;
                 cmbFornecedor.SelectedItem = _despesa.Fornecedor;
                 cmbItens.SelectedItem = _despesa.Item;
-                numQuantidade.Value = _despesa.Quantidade;
+                numQuantidade.Value = Convert.ToDecimal(_despesa.Quantidade);
                 numValorUnitario.Text = Convert.ToString(_despesa.ValorUnitario);
             }
         }

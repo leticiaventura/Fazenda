@@ -260,7 +260,7 @@ namespace Fazenda.Apresentacao
         {
             if (_gerenciador is IFormularioDespesa)
             {
-                lblSoma.Text = Convert.ToString((_gerenciador as IFormularioDespesa).CalcularSomaDespesas());
+                lblSoma.Text = ((_gerenciador as IFormularioDespesa).CalcularSomaDespesas()).ToString("n2");
             }
                
         }

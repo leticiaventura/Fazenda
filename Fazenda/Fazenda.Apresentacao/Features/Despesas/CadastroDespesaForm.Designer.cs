@@ -223,6 +223,7 @@
             // 
             // numQuantidade
             // 
+            this.numQuantidade.DecimalPlaces = 3;
             this.numQuantidade.Location = new System.Drawing.Point(135, 209);
             this.numQuantidade.Name = "numQuantidade";
             this.numQuantidade.Size = new System.Drawing.Size(70, 20);

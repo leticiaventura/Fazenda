@@ -13,7 +13,7 @@ namespace Fazenda.Dominio.Features.Despesas
     {
         public int Id { get; set; }
         public double ValorUnitario { get; set; }
-        public int Quantidade { get; set; }
+        public double Quantidade { get; set; }
         public double ValorTotal { get => Quantidade * ValorUnitario; private set { } }
         public virtual Fornecedor Fornecedor { get; set; }
         public virtual Item Item { get; set; }
