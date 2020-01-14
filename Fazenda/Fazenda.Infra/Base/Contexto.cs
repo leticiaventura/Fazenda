@@ -13,6 +13,7 @@ using Fazenda.Infra.Features.Animais;
 using Fazenda.Infra.Features.Despesas;
 using Fazenda.Infra.Features.Fornecedores;
 using Fazenda.Infra.Features.Itens;
+using Fazenda.Infra.Initializer;
 
 namespace Fazenda.Infra.Base
 {
@@ -20,7 +21,7 @@ namespace Fazenda.Infra.Base
     {
         public Contexto() : base("DBFazenda")
         {
-            Database.SetInitializer(new CreateDatabaseIfNotExists<Contexto>());
+            Database.SetInitializer(new DbInitializer());
             Configuration.LazyLoadingEnabled = true;
         }
 

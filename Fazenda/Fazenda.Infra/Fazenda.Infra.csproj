@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\Contexto.cs" />
+    <Compile Include="Base\DbContextFactory.cs" />
     <Compile Include="Features\Animais\AnimalConfiguracao.cs" />
     <Compile Include="Features\Animais\AnimalRepositorio.cs" />
     <Compile Include="Features\Despesas\DespesaConfiguracao.cs" />
@@ -56,9 +57,18 @@
     <Compile Include="Features\Fornecedores\FornecedorRepositorio.cs" />
     <Compile Include="Features\Itens\ItemConfiguracao.cs" />
     <Compile Include="Features\Itens\ItemRepositorio.cs" />
+    <Compile Include="Initializer\DbInitializer.cs" />
+    <Compile Include="Migrations\201810310154534_Initial.cs" />
+    <Compile Include="Migrations\201810310154534_Initial.Designer.cs">
+      <DependentUpon>201810310154534_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810310157447_v2.cs" />
+    <Compile Include="Migrations\201810310157447_v2.Designer.cs">
+      <DependentUpon>201810310157447_v2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
@@ -68,6 +78,14 @@
       <Project>{8403BC48-56A1-409D-A597-4E13029EDDC8}</Project>
       <Name>Fazenda.Dominio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201810310154534_Initial.resx">
+      <DependentUpon>201810310154534_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810310157447_v2.resx">
+      <DependentUpon>201810310157447_v2.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
